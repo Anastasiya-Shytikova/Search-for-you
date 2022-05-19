@@ -1,52 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search-for-you</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-
-<body>
-    <header class="header">
-        <h2 class="logo">Ми вільні! Ми сильні! Ми разом!</h2>
-        <nav>
-            <ul class="navList">
-                <!-- <li class="navListItem">home</li>
-                <li class="navListItem">About</li>
-                <li class="navListItem">Sign in</li>
-                <li class="navListItem">Sign out</li> -->
-            </ul>
-        </nav>
-        <div class="header-block__button">
-            <button class="button">Укр En</button>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пошук людей</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <include src="./partials/header/header.html"></include>
+      <main class="main" id="root">
+        <div class="wrapper__login">
+          <!-- <include src="./partials/profile/login-form.html"></include> -->
         </div>
-    </header>
+      </main>
+      <include src="./partials/footer/footer.html"></include>
+    </div>
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+    <!-- <include src="./partials/example.html"></include> -->
 
-    <main class="main">
-        <div class="text">
-            текст с описанием сервиса
-        </div>
-    </main>
-    <script src="./index.js" type="module"></script>
-    <footer class="footer">
-        <div class="footer__container _container">
-            <h3 class="footer__label">
-                Маєте питання? Скористайтесь нашим чат ботом:
-            </h3>
-            <div class="footer__icon">
-                <img src="/img/svg/telegram.svg" alt="service">
-            </div>
-            <div class="footer__text">
-                © 2022 Всі права захищені
-            </div>
-        </div>
-    </footer>
-</body>
-
-
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+  </body>
 </html>
