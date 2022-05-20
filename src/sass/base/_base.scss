@@ -2,6 +2,21 @@ html {
   height: 100%;
 }
 
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
 .wrapper {
   position: relative;
   display: flex;
@@ -15,7 +30,6 @@ html {
 
 .main {
   flex: 1 1 auto;
-  // background-color: chartreuse;
 }
 
 .footer {
