@@ -1,0 +1,311 @@
+.section__login {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: $bg-yellow;
+  transition: background-color $duration $timing-function;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desctop) {
+  }
+}
+
+.section__login.active {
+  background-color: $bg-blue;
+}
+
+.svg__wrap {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.svg__container {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+
+.login__svg {
+  position: absolute;
+  @media (min-width: $tablet) {
+    width: 375px;
+    height: 355px;
+  }
+
+  @media (min-width: $desctop) {
+    width: 676px;
+    height: 663px;
+  }
+}
+
+.login__svg--yellow {
+  fill: $fill-yellow;
+  transition: $duration $timing-function;
+  @media (min-width: $tablet) {
+    right: 0;
+    top: 200px;
+  }
+  @media (min-width: $desctop) {
+    top: 150px;
+  }
+}
+
+.section__login.active .login__svg--yellow {
+  fill: $fill-blue;
+}
+
+.login__svg--blue {
+  fill: $fill-blue;
+  transition: $duration $timing-function;
+  @media (min-width: $tablet) {
+    left: -50px;
+    top: 20px;
+  }
+  @media (min-width: $desctop) {
+    top: -150px;
+  }
+}
+
+.section__login.active .login__svg--blue {
+  fill: $fill-yellow;
+}
+
+.section__login-title {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.3;
+  text-align: center;
+  color: $bg-blue;
+
+  margin-bottom: 10px;
+
+  position: relative;
+  z-index: 10;
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+
+.section__login.active .section__login-title {
+  color: $bg-yellow;
+}
+
+.wrapper__login {
+  position: relative;
+  z-index: 10;
+}
+
+.login__container {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 650px;
+    height: 390px;
+    padding: 40px 0;
+  }
+}
+
+.login__block {
+  height: 100%;
+  background-color: $bg-login-block-blue;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.section__login.active .login__block {
+  background-color: $bg-login-block-yellow;
+}
+
+.login__section--item {
+  width: 50%;
+  text-align: center;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: 30px 0;
+  }
+}
+
+.login__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+
+  color: $color-white;
+
+  margin-bottom: 30px;
+}
+
+.login__btn {
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+
+  margin: 0 auto;
+
+  border-radius: 40px;
+  padding: 3px 25px 3px 25px;
+}
+
+.signin__btn,
+.form__signin--btn {
+  background-color: $bg-yellow;
+  color: $bg-blue;
+}
+
+.signout__btn,
+.form__signup--btn {
+  background-color: $bg-blue;
+  color: $bg-yellow;
+}
+
+.form__box {
+  width: 100%;
+  height: 350px;
+  top: 0;
+  background-color: $bg-blue;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  transition: $duration $timing-function;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  // display: none;
+
+  @media (min-width: $tablet) {
+    height: 100%;
+    width: 50%;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.form__box.active {
+  background-color: $bg-yellow;
+  top: 150px;
+  left: 0;
+
+  @media (min-width: $tablet) {
+    left: 50%;
+    top: 0;
+  }
+}
+
+.form {
+  position: absolute;
+  width: 100%;
+  padding: 50px;
+  transition: 0.5s;
+
+  text-align: center;
+}
+
+.form__signin {
+  left: 0;
+  transition-delay: $transition-delay;
+}
+
+.form__signup {
+  left: 100%;
+  transition-delay: 0;
+}
+
+.form__box.active .form__signin {
+  left: -100%;
+  transition-delay: 0;
+}
+
+.form__box.active .form__signup {
+  left: 0;
+  transition-delay: $transition-delay;
+}
+
+.form__subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+
+  color: $bg-yellow;
+  margin-bottom: 20px;
+}
+
+.section__login.active .form__subtitle {
+  color: $bg-blue;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form__label--margin {
+  margin-bottom: 15px;
+}
+
+.form__label--checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form__input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 15px;
+  outline: none;
+}
+
+.form__signin--btn {
+  margin-bottom: 20px;
+}
+
+.form__link-forgot {
+  color: $bg-yellow;
+  text-decoration: underline;
+}
+
+.form__checkbox {
+  margin-right: 15px;
+}
+
+.form__checkbox-text {
+  text-align: left;
+  font-size: 10px;
+}

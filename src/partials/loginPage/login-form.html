@@ -1,0 +1,82 @@
+<section class="section section__login">
+  <div class="container">
+    <div class="svg__wrap">
+      <div class="svg__container svg__container--yellow">
+        <svg class="login__svg login__svg--yellow">
+          <use href="./images/icons/icons.svg#svg-yellow"></use>
+        </svg>
+      </div>
+      <div class="svg__container svg__container--blue">
+        <svg class="login__svg login__svg--blue">
+          <use href="./images/icons/icons.svg#svg-blue"></use>
+        </svg>
+      </div>
+    </div>
+    <h1 class="section__login-title">
+      Этот ресурс преднозначин для людей которые во время войны потерялись друг с другом. И хотят
+      найтись!
+    </h1>
+    <div class="wrapper__login">
+      <article class="login__container">
+        <div class="login__block">
+          <section class="login__section login__section--item">
+            <h2 class="login__title">У Вас уже есть аккаунт?</h2>
+            <button class="login__btn signin__btn">LOGIN</button>
+          </section>
+          <section class="login__section login__section--item">
+            <h2 class="login__title">У Вас ещё нет аккаунта?</h2>
+            <button class="login__btn signout__btn">REGISTRATION</button>
+          </section>
+        </div>
+
+        <div class="form__box">
+          <form action="#" class="form form__signin">
+            <h3 class="form__subtitle">LOGIN</h3>
+
+            <label class="form__label">
+              <input class="form__input" type="text" name="email" placeholder="Email" />
+            </label>
+            <label class="form__label form__label--margin">
+              <input class="form__input" type="text" name="password" placeholder="Password" />
+            </label>
+            <p>
+              <button class="login__btn form__signin--btn" type="submit">LOGIN</button>
+            </p>
+            <p>
+              <a class="form__link-forgot" href="#">Forgot password</a>
+            </p>
+          </form>
+
+          <form action="#" class="form form__signup">
+            <h3 class="form__subtitle form__subtitle--blue">REGISTRATION</h3>
+            <label class="form__label">
+              <input class="form__input" type="text" name="name" placeholder="Name" />
+            </label>
+            <label class="form__label">
+              <input class="form__input" type="text" name="email" placeholder="Email" />
+            </label>
+            <label class="form__label">
+              <input class="form__input" type="text" name="password" placeholder="Password" />
+            </label>
+            <label class="form__label">
+              <input
+                class="form__input"
+                type="text"
+                name="password"
+                placeholder="Repeat password"
+              />
+            </label>
+            <label class="form__label form__label--margin form__label--checkbox">
+              <input class="form__checkbox" type="checkbox" name="checkbox" />
+              <span class="form__checkbox-span"></span>
+              <p class="form__checkbox-text">Даю згоду на обробку персональних даных</p>
+            </label>
+            <p>
+              <button class="login__btn form__signup--btn" type="submit">REGISTRATION</button>
+            </p>
+          </form>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
