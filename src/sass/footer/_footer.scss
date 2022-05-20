@@ -1,1 +1,52 @@
+.footer {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 17px;
+  text-align: center;
 
+  border-top: 1px solid $bg-yellow;
+
+  background-color: $bg-blue;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  color: $color-white;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.footer__svg {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+.footer__copyright {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: center;
+  color: $color-white;
+
+  @media (min-width: $tablet) {
+    font-size: 16;
+  }
+}

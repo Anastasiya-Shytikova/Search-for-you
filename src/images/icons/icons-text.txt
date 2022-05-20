@@ -1,0 +1,5 @@
+people-icon
+search-icon
+svg-blue
+svg-yellow
+telegram

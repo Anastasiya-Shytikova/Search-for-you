@@ -1,2 +1,16 @@
-$bg-yellow: #fed501;
-$bg-blue: #1e6aa6;
+$bg-yellow: rgb(254, 213, 1);
+$bg-blue: rgb(30, 106, 166);
+$color-white: #ffffff;
+
+$duration: 0.5s;
+$timing-function: ease-in-out;
+$transition-delay: 0.25s;
+
+$bg-login-block-yellow: rgba(254, 213, 1, 0.5);
+$bg-login-block-blue: rgba(30, 106, 166, 0.5);
+
+$fill-yellow: rgba(254, 183, 1, 0.3);
+$fill-blue: rgba(17, 93, 152, 0.3);
+
+$tablet: 768px;
+$desctop: 1200px;
