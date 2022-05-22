@@ -1,13 +1,29 @@
-import getRefs from '../refs/getRefs.js';
+import Notiflix from 'notiflix';
+import getRefs from '../refs/getRefs';
+import registrationCheck from '../registrationСheck/registrationСheck';
+const { loginForm } = getRefs();
 
-const { signIn, signOut, formBox, wrapperLogin } = getRefs();
+const handleLoginForm = e => {
+  e.preventDefault();
 
-signOut.addEventListener('click', () => {
-  formBox.classList.add('active');
-  wrapperLogin.classList.add('active');
-});
+  const email = e.currentTarget.email.value;
+  const password = e.currentTarget.password.value;
 
-signIn.addEventListener('click', () => {
-  formBox.classList.remove('active');
-  wrapperLogin.classList.remove('active');
-});
+  if (email === '' || password === '') {
+    return Notiflix.Notify.info('Enter field');
+  }
+
+  registrationCheck(password);
+
+  const formData = new FormData(loginForm);
+  const body = {};
+
+  formData.append('form', 'loginForm');
+
+  formData.forEach((value, field) => {
+    body[field] = value.trim();
+  });
+
+  loginForm.reset();
+};
+loginForm.addEventListener('submit', handleLoginForm);
