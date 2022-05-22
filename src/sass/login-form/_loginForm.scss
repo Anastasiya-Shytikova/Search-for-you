@@ -58,6 +58,7 @@
 .login__svg--yellow {
   fill: $fill-yellow;
   transition: $duration $timing-function;
+
   @media (min-width: $tablet) {
     right: 0;
     top: 200px;
@@ -183,10 +184,15 @@
   color: $bg-blue;
 }
 
-.signout__btn,
+.signup__btn,
 .form__signup--btn {
   background-color: $bg-blue;
   color: $bg-yellow;
+}
+
+.form__signup--btn.disabled {
+  background-color: $bg-login-block-blue;
+  color: $bg-login-block-yellow;
 }
 
 .form__box {
@@ -205,7 +211,6 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  // display: none;
 
   @media (min-width: $tablet) {
     height: 100%;
@@ -268,6 +273,7 @@
 }
 
 .form__label {
+  position: relative;
   display: block;
   margin-bottom: 10px;
 }
@@ -308,4 +314,26 @@
 .form__checkbox-text {
   text-align: left;
   font-size: 10px;
+}
+
+.form__error-password {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.form__eye-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icons/icons.svg#eye');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.form__eye-btn.show {
+  background-image: url('../images/icons/icons.svg#eye-show');
 }
