@@ -31,4 +31,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{"../helpers/helpers":"jNpx","../main-page/mainPage":"Ceur"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/formSelection/formSelection.js"),require("./js/forms/loginForm/loginForm"),require("./js/forms/registrationForm/registrationForm"),require("./js/visuallyHiddenPassword/visuallyHiddenPassword"),require("./js/localStorage/isLocalStoreg"),require("./js/modal/modalClose");
 },{"./sass/main.scss":"clu1","./js/formSelection/formSelection.js":"J5lH","./js/forms/loginForm/loginForm":"t4W7","./js/forms/registrationForm/registrationForm":"wcEg","./js/visuallyHiddenPassword/visuallyHiddenPassword":"amUD","./js/localStorage/isLocalStoreg":"Ji6B","./js/modal/modalClose":"eqeY"}]},{},["Focm"], null)
-//# sourceMappingURL=/search-for-you/src.7ce370c3.js.map
+//# sourceMappingURL=/search-for-you/src.127b266a.js.map
