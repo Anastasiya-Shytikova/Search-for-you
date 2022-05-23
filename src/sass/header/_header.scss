@@ -28,35 +28,3 @@
   @media (min-width: 1200px) {
   }
 }
-
-.select-wraper{
-  position: relative;
-}
-
-
-.select{
-  left: 10px;
-  top: -10px;
-  position: absolute;
-  background-color: $bg-yellow;
-border-radius: 3px;
-font-weight: 400;
-  font-size: 12px;
-  line-height: 31px;
-  cursor: pointer;
-  @media (min-width: 768px) {
-    left: 55px;
-    top: -8px;
-
-      font-size: 20px;
-    }
-        @media (min-width: 1200px) {
-  left: 270px;
-    top: -8px;
-
-        }
-        
-
-
-
-}
