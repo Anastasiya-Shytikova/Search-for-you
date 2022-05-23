@@ -22,5 +22,4 @@ const handleLoginForm = e => {
 
   loginForm.reset();
 };
-
 loginForm.addEventListener('submit', handleLoginForm);
