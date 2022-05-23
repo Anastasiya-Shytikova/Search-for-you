@@ -1,5 +1,4 @@
 import './sass/main.scss';
-import './js/loginForm/loginForm.js';
 import './js/language/langTranslation.js';
 import './js/formSelection/formSelection.js';
 import './js/forms/loginForm/loginForm';
