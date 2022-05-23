@@ -1,6 +1,6 @@
 import Notiflix from 'notiflix';
-import getRefs from '../refs/getRefs';
-import { KEY_LOGIN } from '../helpers/helpers';
+import getRefs from '../../refs/getRefs';
+import { KEY_LOGIN } from '../../helpers/helpers';
 
 const { registrationForm, checkbox, registrationBtn, formErrorPassword } = getRefs();
 
@@ -21,14 +21,10 @@ const handleRegistrationForm = e => {
     return;
   }
 
-  const formData = new FormData(registrationForm);
-  const body = {};
-
-  formData.append('form', 'registrationForm');
-
-  formData.forEach((value, field) => {
-    body[field] = value.trim();
-  });
+  const body = {
+    email,
+    password,
+  };
 
   localStorage.setItem(KEY_LOGIN, JSON.stringify(body));
 
