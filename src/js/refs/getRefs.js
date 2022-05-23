@@ -15,6 +15,11 @@ function getRefs() {
 
     checkbox: document.querySelector('.form__checkbox'),
     registrationBtn: document.querySelector('[data-reg]'),
+
+    // Modal for form
+    overlay: document.querySelector('.overlay'),
+    containerForm: document.querySelector('.container-form'),
+    closeModalBtn: document.querySelector('.modal__close'),
   };
 }
 

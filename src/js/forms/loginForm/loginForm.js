@@ -1,6 +1,6 @@
 import Notiflix from 'notiflix';
-import getRefs from '../refs/getRefs';
-import registrationCheck from '../registrationСheck/registrationСheck';
+import getRefs from '../../refs/getRefs';
+import registrationCheck from '../../registrationСheck/registrationСheck';
 const { loginForm } = getRefs();
 
 const handleLoginForm = e => {
@@ -15,14 +15,10 @@ const handleLoginForm = e => {
 
   registrationCheck(password);
 
-  const formData = new FormData(loginForm);
-  const body = {};
-
-  formData.append('form', 'loginForm');
-
-  formData.forEach((value, field) => {
-    body[field] = value.trim();
-  });
+  const body = {
+    email,
+    password,
+  };
 
   loginForm.reset();
 };
