@@ -16,6 +16,7 @@
       Этот ресурс преднозначин для людей которые во время войны потерялись друг с другом. И хотят
       найтись!
     </h1>
+
     <div class="wrapper__login">
       <article class="login__container">
         <div class="login__block">
@@ -25,19 +26,21 @@
           </section>
           <section class="login__section login__section--item">
             <h2 class="login__title lang__registration_text">У Вас ещё нет аккаунта?</h2>
-            <button class="login__btn signout__btn">REGISTRATION</button>
+
+            <button class="login__btn signup__btn">REGISTRATION</button>
           </section>
         </div>
 
         <div class="form__box">
-          <form action="#" class="form form__signin">
+          <form action="#" class="form form__signin" data-signin>
             <h3 class="form__subtitle lang__registration_title">LOGIN</h3>
 
             <label class="form__label">
-              <input class="form__input" type="text" name="email" placeholder="Email" />
+              <input class="form__input" type="email" name="email" placeholder="Email" />
             </label>
             <label class="form__label form__label--margin">
-              <input class="form__input" type="text" name="password" placeholder="Password" />
+              <input class="form__input" type="password" name="password" placeholder="Password" />
+              <button class="form__eye-btn" type="button"></button>
             </label>
             <p>
               <button class="login__btn form__signin--btn" type="submit lang__registration_button">
@@ -49,34 +52,37 @@
             </p>
           </form>
 
-          <form action="#" class="form form__signup">
+          <form action="#" class="form form__signup" data-signup>
             <h3 class="form__subtitle form__subtitle--blue lang__registration_title">
               REGISTRATION
             </h3>
+
             <label class="form__label">
-              <input class="form__input" type="text" name="name" placeholder="Name" />
+              <input class="form__input" type="email" name="email" placeholder="Email" />
             </label>
             <label class="form__label">
-              <input class="form__input" type="text" name="email" placeholder="Email" />
-            </label>
-            <label class="form__label">
-              <input class="form__input" type="text" name="password" placeholder="Password" />
+              <input class="form__input" type="password" name="password" placeholder="Password" />
+              <button class="form__eye-btn" type="button"></button>
             </label>
             <label class="form__label">
               <input
                 class="form__input"
-                type="text"
-                name="password"
+                type="password"
+                name="repeatPassword"
                 placeholder="Repeat password"
               />
+              <button class="form__eye-btn" type="button"></button>
             </label>
+            <p class="form__error-password visually-hidden">Порли не совподают</p>
             <label class="form__label form__label--margin form__label--checkbox">
               <input class="form__checkbox" type="checkbox" name="checkbox" />
               <span class="form__checkbox-span"></span>
               <p class="form__checkbox-text">Даю згоду на обробку персональних даных</p>
             </label>
             <p>
-              <button class="login__btn form__signup--btn" type="submit">REGISTRATION</button>
+              <button class="login__btn form__signup--btn disabled" type="submit" disabled data-reg>
+                REGISTRATION
+              </button>
             </p>
           </form>
         </div>

@@ -1,5 +1,4 @@
 import getRefs from '../refs/getRefs.js';
-
 const { signIn, signOut, formBox, wrapperLogin } = getRefs();
 
 signOut.addEventListener('click', () => {
