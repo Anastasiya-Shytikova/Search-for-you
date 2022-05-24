@@ -1,6 +1,6 @@
 export const russian = {
   name: "ru",
-  header_title: "we free" ,
+  header_title: "Мы свободные" ,
  
     main_txt: "free",
 
