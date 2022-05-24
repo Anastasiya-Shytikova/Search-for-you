@@ -1,6 +1,6 @@
 export const ukrainian = {
   name: "ua",
-  header_title: "вільні" ,
+  header_title: "Ми вільні! Ми сильні! Ми разом!" ,
  
     main_txt: "ивафивафивмчясм",
 
