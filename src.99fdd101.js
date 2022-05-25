@@ -43,4 +43,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{"../refs/getRefs":"lOVX","./langTranslation":"f3Z3","./states":"sKIG","./ukrainian":"Ap3V"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/formSelection/formSelection.js"),require("./js/forms/loginForm/loginForm"),require("./js/forms/registrationForm/registrationForm"),require("./js/visuallyHiddenPassword/visuallyHiddenPassword"),require("./js/localStorage/isLocalStoreg"),require("./js/modal/modalClose"),require("./js/language/langSelect");
 },{"./sass/main.scss":"clu1","./js/formSelection/formSelection.js":"J5lH","./js/forms/loginForm/loginForm":"t4W7","./js/forms/registrationForm/registrationForm":"wcEg","./js/visuallyHiddenPassword/visuallyHiddenPassword":"amUD","./js/localStorage/isLocalStoreg":"Ji6B","./js/modal/modalClose":"eqeY","./js/language/langSelect":"Z0a5"}]},{},["Focm"], null)
-//# sourceMappingURL=/search-for-you/src.6cb438dd.js.map
+//# sourceMappingURL=/search-for-you/src.99fdd101.js.map
