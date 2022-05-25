@@ -1,5 +1,10 @@
+import getRefs from '../../refs/getRefs';
+import humanRegistrationFormProcessing from './humanRegistrationFormProcessing';
+
+const { containerForm } = getRefs();
+
 function marcupPipleRegistration() {
-  return `
+  const marcupPeopleRegistrationForm = `
   <form class="form__people form__people--registr">
   <span class="form__svg-people"></span>
   <p class="form__description form__description--registration">
@@ -7,8 +12,8 @@ function marcupPipleRegistration() {
     вас відшукати. Дякуємо
   </p>
   <div class="form__download-wrap">
-    <span class="form__svg-download"></span>
-    <p class="form__download-text">Завантажити фото .jpeg, .png, .tiff</p>
+    <span class="form__svg-download download-img"></span>
+    <p class="form__download-text">Завантажити фото .jpeg, .png, .gif</p>
   </div>
   <label class="form__piople-label">
     <input
@@ -38,7 +43,7 @@ function marcupPipleRegistration() {
     <textarea
       class="form__piople-input"
       type="text"
-      name="textarea"
+      name="message"
       rows="6"
       placeholder="Залиште данi про ваше мiсце знаходження"
     ></textarea>
@@ -46,6 +51,15 @@ function marcupPipleRegistration() {
   <button class="form__piople-btn form__piople-btn--yellow">Зареєструватись</button>
 </form>
   `;
+
+  containerForm.innerHTML = marcupPeopleRegistrationForm;
+
+  const refsPipleRegistrationForm = {
+    formPipleRegistrationForm: document.querySelector('.form__people--registr'),
+    downloadImg: document.querySelector('.download-img'),
+  };
+
+  humanRegistrationFormProcessing(refsPipleRegistrationForm);
 }
 
 export default marcupPipleRegistration;

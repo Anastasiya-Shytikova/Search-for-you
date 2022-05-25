@@ -1,5 +1,10 @@
+import getRefs from '../../refs/getRefs';
+import personSearchFormProcessing from './personSearchFormProcessing';
+
+const { containerForm } = getRefs();
+
 function marcupPeopleSearch() {
-  return `
+  const marcupPeopleSearchForm = `
   <form class="form__people form__people--search">
   <span class="form__svg-search"></span>
   <p class="form__description form__description--search">
@@ -34,13 +39,21 @@ function marcupPeopleSearch() {
   <input
     class="form__piople-input"
     type="text"
-    name="age"
+    name="contacts"
     placeholder="Контактные данные"
   />
 </label>
   <button class="form__piople-btn form__piople-btn--blue">Знайти</button>
 </form>
 `;
+
+  containerForm.innerHTML = marcupPeopleSearchForm;
+
+  const refsPipleSearchForm = {
+    formPipleRegistrationForm: document.querySelector('.form__people--search'),
+  };
+
+  personSearchFormProcessing(refsPipleSearchForm);
 }
 
 export default marcupPeopleSearch;

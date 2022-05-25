@@ -1,4 +1,5 @@
 import Notiflix from 'notiflix';
+import { signUpOperation } from '../../service/authOperations';
 import getRefs from '../../refs/getRefs';
 import { KEY_LOGIN } from '../../helpers/helpers';
 
@@ -26,7 +27,7 @@ const handleRegistrationForm = e => {
     password,
   };
 
-  localStorage.setItem(KEY_LOGIN, JSON.stringify(body));
+  signUpOperation(body);
 
   registrationForm.reset();
 };

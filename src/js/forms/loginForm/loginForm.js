@@ -1,4 +1,5 @@
 import Notiflix from 'notiflix';
+import { signInOperation } from '../../service/authOperations';
 import getRefs from '../../refs/getRefs';
 import registrationCheck from '../../registrationСheck/registrationСheck';
 const { loginForm } = getRefs();
@@ -19,6 +20,8 @@ const handleLoginForm = e => {
     email,
     password,
   };
+
+  signInOperation(body);
 
   loginForm.reset();
 };
