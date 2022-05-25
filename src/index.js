@@ -5,3 +5,5 @@ import './js/forms/registrationForm/registrationForm';
 import './js/visuallyHiddenPassword/visuallyHiddenPassword';
 import './js/localStorage/isLocalStoreg';
 import './js/modal/modalClose';
+import './js/language/langSelect'
+

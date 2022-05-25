@@ -20,6 +20,9 @@ function getRefs() {
     overlay: document.querySelector('.overlay'),
     containerForm: document.querySelector('.container-form'),
     closeModalBtn: document.querySelector('.modal__close'),
+
+    // Select
+    selectContainer: document.querySelector('.container__selected')
   };
 }
 
