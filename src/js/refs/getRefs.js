@@ -16,13 +16,16 @@ function getRefs() {
     checkbox: document.querySelector('.form__checkbox'),
     registrationBtn: document.querySelector('[data-reg]'),
 
+    formInputEmail: document.querySelector('.form__input-email'),
+    formInputEmailReg: document.querySelector('.form__input-email-reg'),
+
     // Modal for form
     overlay: document.querySelector('.overlay'),
     containerForm: document.querySelector('.container-form'),
     closeModalBtn: document.querySelector('.modal__close'),
 
     // Select
-    selectContainer: document.querySelector('.container__selected')
+    selectContainer: document.querySelector('.container__selected'),
   };
 }
 

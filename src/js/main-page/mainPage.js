@@ -3,7 +3,7 @@ import marcupPeopleSearch from '../forms/search-people/searchPeople';
 import marcupPipleRegistration from '../forms/registration-people/registrationPeople';
 import { handleCloseModalEsc } from '../modal/modalClose';
 
-const { root, overlay, containerForm } = getRefs();
+const { root, overlay } = getRefs();
 
 export const marcupMainPage = () => {
   const mainPage = `<section class="section section__main">
@@ -29,15 +29,13 @@ export const marcupMainPage = () => {
 
   searchBtn.addEventListener('click', () => {
     overlay.classList.add('active');
-    containerForm.innerHTML = '';
-    containerForm.innerHTML = marcupPeopleSearch();
+    marcupPeopleSearch();
     window.addEventListener('keydown', handleCloseModalEsc);
   });
 
   registrBtn.addEventListener('click', () => {
     overlay.classList.add('active');
-    containerForm.innerHTML = '';
-    containerForm.innerHTML = marcupPipleRegistration();
+    marcupPipleRegistration();
     window.addEventListener('keydown', handleCloseModalEsc);
   });
 };

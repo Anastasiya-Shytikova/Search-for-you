@@ -1,143 +1,154 @@
 .section__main {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 .main__wrapper {
-    overflow: hidden;
-    height: 100%;
-    @media (min-width: 768px) {
-        display: flex;
-    }
+  overflow: hidden;
+  height: 100%;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .main__content {
-    position: relative;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
-    text-align: center;
-    @media (min-width: 768px) {
-        width: 50%;
-        height: 100%;
-    }
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  text-align: center;
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 100%;
+  }
 }
 
 .main__search,
-.main__registratio {
-    overflow: hidden;
+.main__registration {
+  overflow: hidden;
 }
 
 .main__search {
-    background-color: $bg-yellow;
+  background-color: $bg-yellow;
 }
 
 .main__registration {
-    background-color: $bg-blue;
+  background-color: $bg-blue;
 }
 
 .coat-of-arms {
-    position: absolute;
-    width: 435px;
-    height: 430px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    @media (min-width: 768px) {
-        width: 319px;
-        height: 311px;
-    }
-    @media (min-width: 1200px) {
-        width: 748px;
-        height: 570px;
-    }
+  position: absolute;
+  width: 435px;
+  height: 430px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: 768px) {
+    width: 319px;
+    height: 311px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 748px;
+    height: 570px;
+  }
 }
 
 .coat-of-arms-yellow {
-    bottom: -230px;
-    background-image: url('../images/icons/icons.svg#tryzub-blue');
-    @media (min-width: 768px) {
-        top: auto;
-        bottom: auto;
-        right: -160px;
-    }
-    @media (min-width: 1200px) {
-        right: -457px;
-    }
+  bottom: -230px;
+  background-image: url('../images/icons/icons.svg#tryzub-blue');
+
+  @media (min-width: 768px) {
+    top: auto;
+    bottom: auto;
+    right: -160px;
+  }
+
+  @media (min-width: 1200px) {
+    right: -456px;
+  }
 }
 
 .coat-of-arms-blue {
-    top: -200px;
-    background-image: url('../images/icons/icons.svg#tryzub-yellow');
-    @media (min-width: 768px) {
-        top: auto;
-        bottom: auto;
-        left: -160px;
-    }
-    @media (min-width: 1200px) {
-        left: -291px;
-    }
+  top: -200px;
+  background-image: url('../images/icons/icons.svg#tryzub-yellow');
+
+  @media (min-width: 768px) {
+    top: auto;
+    bottom: auto;
+    left: -160px;
+  }
+
+  @media (min-width: 1200px) {
+    left: -291px;
+  }
 }
 
 .main__title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 1.3;
-    text-align: center;
-    width: 220px;
-    margin: 0 auto;
-    margin-bottom: 45px;
-    position: relative;
-    z-index: 10;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.3;
+  text-align: center;
+  width: 220px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  position: relative;
+  z-index: 10;
 }
 
 .main__title--blue {
-    color: $bg-blue;
+  color: $bg-blue;
 }
 
 .main__title--yellow {
-    color: $bg-yellow;
+  color: $bg-yellow;
 }
 
 .main__btn {
-    position: relative;
-    font-weight: 500;
-    font-size: 24px;
-    z-index: 10;
+  position: relative;
+  font-weight: 500;
+  font-size: 24px;
+  z-index: 10;
 }
 
 .main__svg {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    z-index: 10;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
 }
 
 .main__svg-search {
-    width: 34px;
-    height: 33px;
-    background-image: url('../images/icons/icons.svg#search-icon');
+  width: 34px;
+  height: 33px;
+  background-image: url('../images/icons/icons.svg#search-icon');
 }
 
 .main__svg-people {
+  width: 58px;
+  height: 78px;
+  background-image: url('../images/icons/icons.svg#people-icon');
+
+  @media (min-width: 768px) {
     width: 58px;
     height: 55px;
-    background-image: url('../images/icons/icons.svg#people-icon');
+  }
 }
 
 .main__btn--blue {
-    background-color: $bg-blue;
-    color: $bg-yellow;
+  background-color: $bg-blue;
+  color: $bg-yellow;
 }
 
 .main__btn--yellow {
-    background-color: $bg-yellow;
-    color: $bg-blue;
+  background-color: $bg-yellow;
+  color: $bg-blue;
 }

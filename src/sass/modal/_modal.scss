@@ -25,6 +25,7 @@
   max-width: calc(100vw - 20px);
   max-height: calc(100vh - 24px);
   border-radius: 5px;
+  overflow: auto;
 }
 
 .modal__close {
@@ -51,6 +52,6 @@
     width: 400px;
   }
   @media (min-width: 1200px) {
-    width: 600px;
+    width: 480px;
   }
 }
