@@ -1,25 +1,48 @@
-import Notiflix from 'notiflix';
+import phoneNumberMask from './phoneNumberMask';
 import getRefs from '../../refs/getRefs';
 
 const { overlay } = getRefs();
 
-const personSearchFormProcessing = ({ formPipleRegistrationForm }) => {
+const personSearchFormProcessing = refs => {
+  const { formPipleRegistrationForm, telephoneInput, fieldsForm } = refs;
+
+  function validateNumberToInput() {
+    telephoneInput.addEventListener('input', e => {
+      let input = e.target;
+      if (input.value[0] === '0') {
+        phoneNumberMask(telephoneInput);
+        return;
+      } else {
+        const value = input.value.replace(/[^\d]/g, '');
+        input.value = value;
+      }
+    });
+  }
+
+  validateNumberToInput();
+
   formPipleRegistrationForm.addEventListener('submit', e => {
     e.preventDefault();
-    const name = e.currentTarget.name.value;
-    const sity = e.currentTarget.sity.value;
-    const age = e.currentTarget.age.value;
-    const contact = e.currentTarget.contacts.value;
 
-    if (name === '' || sity === '' || age === '' || contact === '') {
-      return Notiflix.Notify.failure('No field');
+    let emptyField = Array.from(fieldsForm).filter(input => input.value === '');
+
+    fieldsForm.forEach(field => {
+      if (field.value === '') {
+        field.classList.add('error');
+      } else {
+        field.classList.remove('error');
+      }
+    });
+
+    if (emptyField.length !== 0) {
+      return;
     }
 
     const body = {
-      name,
-      sity,
-      age,
-      contact,
+      name: e.currentTarget.name.value,
+      sity: e.currentTarget.sity.value,
+      age: e.currentTarget.age.value,
+      tel: e.currentTarget.tel.value,
     };
 
     overlay.classList.remove('active');

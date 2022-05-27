@@ -1,5 +1,6 @@
 import getRefs from '../../refs/getRefs';
 import humanRegistrationFormProcessing from './humanRegistrationFormProcessing';
+import previewFile from './previewFile';
 
 const { containerForm } = getRefs();
 
@@ -12,12 +13,16 @@ function marcupPipleRegistration() {
     вас відшукати. Дякуємо
   </p>
   <div class="form__download-wrap">
-    <span class="form__svg-download download-img"></span>
-    <p class="form__download-text">Завантажити фото .jpeg, .png, .gif</p>
+  <img class="form__download-photo" src="https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png" height="200" alt="Image preview...">
+    <label class="form__download--label">
+      <input class="form__download--input visually-hidden" type="file">
+      <span class="form__svg-download download-img"></span>
+      <p class="form__download-text">Завантажити фото .jpeg, .png, .gif</p>
+    </label>
   </div>
   <label class="form__piople-label">
     <input
-      class="form__piople-input"
+      class="form__piople-input js-input"
       type="text"
       name="name"
       placeholder="Прізвище, Ім’я, по батькові"
@@ -25,7 +30,7 @@ function marcupPipleRegistration() {
   </label>
   <label class="form__piople-label">
     <input
-      class="form__piople-input"
+      class="form__piople-input js-input"
       type="text"
       name="sity"
       placeholder="Область проживання"
@@ -33,15 +38,15 @@ function marcupPipleRegistration() {
   </label>
   <label class="form__piople-label">
     <input
-      class="form__piople-input"
+      class="form__piople-input js-input"
       type="text"
       name="age"
-      placeholder="Рік народження"
+      placeholder="Рік народження 01.01.2000"
     />
   </label>
   <label class="form__piople-label form__piople-label--margin">
     <textarea
-      class="form__piople-input"
+      class="form__piople-input js-input"
       type="text"
       name="message"
       rows="6"
@@ -56,7 +61,8 @@ function marcupPipleRegistration() {
 
   const refsPipleRegistrationForm = {
     formPipleRegistrationForm: document.querySelector('.form__people--registr'),
-    downloadImg: document.querySelector('.download-img'),
+    previewFileUserPhoto: document.querySelector('.form__download--input'),
+    fieldsForm: document.querySelectorAll('.js-input'),
   };
 
   humanRegistrationFormProcessing(refsPipleRegistrationForm);

@@ -27,6 +27,8 @@
     },
     "dependencies": {
         "axios": "^0.27.2",
+        "inputmask": "^5.0.7",
+        "just-validate": "^3.8.1",
         "notiflix": "^3.2.5"
     }
 }
